@@ -1,4 +1,4 @@
-public class Films {
+public class Films implements Comparable<Films>{
     private String nameOfMovie;
     private int durationOfMovie;
 
@@ -32,4 +32,8 @@ public class Films {
     }
 
 
+    @Override
+    public int compareTo(Films o) {
+        return nameOfMovie.compareTo(o.getNameOfMovie());
+    }
 }
