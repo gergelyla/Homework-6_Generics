@@ -17,10 +17,15 @@ public class Main {
 
         System.out.println("----------------------------------------------------------");
 
+        sortedRepository.remove(movie1);
+        /*sortedRepository.remove(movie2);
+        sortedRepository.remove(movie3);*/
 
+        System.out.println("----------------------------------------------------------");
 
+        System.out.println("The sorted repository holds "+sortedRepository.count()+" movies.");
 
-
+        System.out.println("----------------------------------------------------------");
 
         //OrderedRepository methods
         OrderedRepository<Films> orderedRepository=new OrderedRepository<>();
@@ -30,6 +35,10 @@ public class Main {
         orderedRepository.save(movie3);
 
         System.out.println("----------------------------------------------------------");
+
+        /*orderedRepository.remove(movie1);
+        orderedRepository.remove(movie2);
+        orderedRepository.remove(movie3);*/
 
 
     }
