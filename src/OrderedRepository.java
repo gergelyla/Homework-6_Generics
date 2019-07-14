@@ -8,7 +8,8 @@ public class OrderedRepository<T> implements IRepository<T>{
 
     @Override
     public void save(T obj) {
-
+        orderedRepositories.add(obj);
+        System.out.println("Ordered repository: "+orderedRepositories);
     }
 
     @Override

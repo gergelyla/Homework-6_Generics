@@ -11,6 +11,12 @@ public class Main {
         //SortedRepository methods
         SortedRepository<Films> sortedRepository= new SortedRepository<>();
 
+        sortedRepository.save(movie1);
+        sortedRepository.save(movie2);
+        sortedRepository.save(movie3);
+
+        System.out.println("----------------------------------------------------------");
+
 
 
 
@@ -18,6 +24,12 @@ public class Main {
 
         //OrderedRepository methods
         OrderedRepository<Films> orderedRepository=new OrderedRepository<>();
+
+        orderedRepository.save(movie1);
+        orderedRepository.save(movie2);
+        orderedRepository.save(movie3);
+
+        System.out.println("----------------------------------------------------------");
 
 
     }
