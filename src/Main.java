@@ -2,44 +2,68 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        Films movie1=new Films("Indiana Jones", 120);
-        Films movie2=new Films("Star Wars -A New Hope", 130);
-        Films movie3=new Films("Back to the Future", 110);
+        Films movie1 = new Films("Indiana Jones", 120);
+        Films movie2 = new Films("Star Wars-A New Hope", 130);
+        Films movie3 = new Films("Back to the Future", 110);
 
         //SortedRepository methods
-        SortedRepository<Films> sortedRepository= new SortedRepository<>();
+        SortedRepository<Films> sortedRepository = new SortedRepository<>();
 
-        sortedRepository.save(movie1);
-        sortedRepository.save(movie2);
-        sortedRepository.save(movie3);
-
-        System.out.println("----------------------------------------------------------");
-
-        sortedRepository.remove(movie1);
-        /*sortedRepository.remove(movie2);
-        sortedRepository.remove(movie3);*/
-
-        System.out.println("----------------------------------------------------------");
-
-        System.out.println("The sorted repository holds "+sortedRepository.count()+" movies.");
-
-        System.out.println("----------------------------------------------------------");
+        saveSortedRepository(movie1, movie2, movie3, sortedRepository);
+        removeSortedRepository(movie1, sortedRepository);
+        countMembersOfSortedRepository(sortedRepository);
 
         //OrderedRepository methods
-        OrderedRepository<Films> orderedRepository=new OrderedRepository<>();
+        OrderedRepository<Films> orderedRepository = new OrderedRepository<>();
 
+        saveOrderedRepository(movie1, movie2, movie3, orderedRepository);
+        removeOrderedRepository(movie1, orderedRepository);
+        countMembersOfOrderedRepository(orderedRepository);
+    }
+
+    private static void countMembersOfOrderedRepository(OrderedRepository<Films> orderedRepository) {
+        System.out.println("The ordered repository holds " + orderedRepository.count() + " movies.");
+
+        System.out.println("----------------------------------------------------------");
+    }
+
+    private static void removeOrderedRepository(Films movie1, OrderedRepository<Films> orderedRepository) {
+        orderedRepository.remove(movie1);
+        /*orderedRepository.remove(movie2);
+        orderedRepository.remove(movie3);*/
+
+        System.out.println("----------------------------------------------------------");
+    }
+
+    private static void saveOrderedRepository(Films movie1, Films movie2, Films movie3, OrderedRepository<Films> orderedRepository) {
         orderedRepository.save(movie1);
         orderedRepository.save(movie2);
         orderedRepository.save(movie3);
 
         System.out.println("----------------------------------------------------------");
+    }
 
-        /*orderedRepository.remove(movie1);
-        orderedRepository.remove(movie2);
-        orderedRepository.remove(movie3);*/
+    private static void countMembersOfSortedRepository(SortedRepository<Films> sortedRepository) {
+        System.out.println("The sorted repository holds " + sortedRepository.count() + " movies.");
 
+        System.out.println("----------------------------------------------------------");
+    }
 
+    private static void removeSortedRepository(Films movie1, SortedRepository<Films> sortedRepository) {
+        sortedRepository.remove(movie1);
+        /*sortedRepository.remove(movie2);
+        sortedRepository.remove(movie3);*/
+
+        System.out.println("----------------------------------------------------------");
+    }
+
+    private static void saveSortedRepository(Films movie1, Films movie2, Films movie3, SortedRepository<Films> sortedRepository) {
+        sortedRepository.save(movie1);
+        sortedRepository.save(movie2);
+        sortedRepository.save(movie3);
+
+        System.out.println("----------------------------------------------------------");
     }
 }

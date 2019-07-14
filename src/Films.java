@@ -1,10 +1,10 @@
-public class Films implements Comparable<Films>{
+public class Films implements Comparable<Films> {
     private String nameOfMovie;
     private int durationOfMovie;
 
-    public Films(String nameOfMovie,int durationOfMovie){
-        this.nameOfMovie=nameOfMovie;
-        this.durationOfMovie=durationOfMovie;
+    public Films(String nameOfMovie, int durationOfMovie) {
+        this.nameOfMovie = nameOfMovie;
+        this.durationOfMovie = durationOfMovie;
     }
 
     public String getNameOfMovie() {
