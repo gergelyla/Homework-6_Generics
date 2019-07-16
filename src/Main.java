@@ -17,6 +17,7 @@ public class Main {
         removeSortedRepository(movie1, sortedRepository);
         countMembersOfSortedRepository(sortedRepository);
         listAllInSortedRepository(sortedRepository);
+        System.out.println(" ");
 
         //OrderedRepository methods
         System.out.println("Ordered Repository methods:");
@@ -27,6 +28,7 @@ public class Main {
         removeOrderedRepository(movie1, orderedRepository);
         countMembersOfOrderedRepository(orderedRepository);
         listAllInOrderedRepository(orderedRepository);
+        System.out.println(" ");
     }
 
     private static void listAllInOrderedRepository(OrderedRepository<Films> orderedRepository) {

@@ -40,6 +40,7 @@ public class SortedRepository<T> implements IRepository<T> {
 
     @Override
     public Set<T> listAll() {
+        System.out.println("The list of movies in SortedRepository: ");
         Iterator membersOfSortedRepository = sortedRepositories.iterator();
         while (membersOfSortedRepository.hasNext()) {
             System.out.println(membersOfSortedRepository.next());

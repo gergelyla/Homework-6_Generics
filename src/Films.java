@@ -25,10 +25,8 @@ public class Films implements Comparable<Films> {
 
     @Override
     public String toString() {
-        return "Films{" +
-                "nameOfMovie='" + nameOfMovie + '\'' +
-                ", durationOfMovie=" + durationOfMovie +
-                '}';
+        return nameOfMovie + "  |  " +
+                "durationOfMovie: " + durationOfMovie + " minutes";
     }
 
 
