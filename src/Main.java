@@ -9,18 +9,34 @@ public class Main {
         Films movie3 = new Films("Back to the Future", 110);
 
         //SortedRepository methods
+        System.out.println("Sorted Repository methods:");
+        System.out.println(" ");
         SortedRepository<Films> sortedRepository = new SortedRepository<>();
 
         saveSortedRepository(movie1, movie2, movie3, sortedRepository);
         removeSortedRepository(movie1, sortedRepository);
         countMembersOfSortedRepository(sortedRepository);
+        listAllInSortedRepository(sortedRepository);
 
         //OrderedRepository methods
+        System.out.println("Ordered Repository methods:");
+        System.out.println(" ");
         OrderedRepository<Films> orderedRepository = new OrderedRepository<>();
 
         saveOrderedRepository(movie1, movie2, movie3, orderedRepository);
         removeOrderedRepository(movie1, orderedRepository);
         countMembersOfOrderedRepository(orderedRepository);
+        listAllInOrderedRepository(orderedRepository);
+    }
+
+    private static void listAllInOrderedRepository(OrderedRepository<Films> orderedRepository) {
+        orderedRepository.listAll();
+        System.out.println("----------------------------------------------------------");
+    }
+
+    private static void listAllInSortedRepository(SortedRepository<Films> sortedRepository) {
+        sortedRepository.listAll();
+        System.out.println("----------------------------------------------------------");
     }
 
     private static void countMembersOfOrderedRepository(OrderedRepository<Films> orderedRepository) {

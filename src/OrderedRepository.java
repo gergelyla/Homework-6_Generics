@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class OrderedRepository<T> implements IRepository<T> {
     private List<T> orderedRepositories = new ArrayList<>();
@@ -41,6 +39,14 @@ public class OrderedRepository<T> implements IRepository<T> {
 
     @Override
     public Set<T> listAll() {
+        Set<T> listedMovies = new TreeSet<>();
+        for (int i = 0; i < orderedRepositories.size(); i++) {
+            listedMovies.add(orderedRepositories.get(i));
+        }
+        Iterator membersOfOrderedRepository = listedMovies.iterator();
+        while (membersOfOrderedRepository.hasNext()) {
+            System.out.println(membersOfOrderedRepository.next());
+        }
         return null;
     }
 }

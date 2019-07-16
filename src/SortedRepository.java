@@ -1,4 +1,5 @@
 
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -28,7 +29,6 @@ public class SortedRepository<T> implements IRepository<T> {
         }
     }
 
-
     @Override
     public int count() {
         int movieCounter = 0;
@@ -40,6 +40,10 @@ public class SortedRepository<T> implements IRepository<T> {
 
     @Override
     public Set<T> listAll() {
+        Iterator membersOfSortedRepository = sortedRepositories.iterator();
+        while (membersOfSortedRepository.hasNext()) {
+            System.out.println(membersOfSortedRepository.next());
+        }
         return null;
     }
 
