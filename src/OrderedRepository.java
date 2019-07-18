@@ -25,7 +25,6 @@ public class OrderedRepository<T> implements IRepository<T> {
         if (foundMovie = false) {
             System.out.println("No such movie in the repository");
         }
-
     }
 
     @Override

@@ -29,7 +29,6 @@ public class Films implements Comparable<Films> {
                 "durationOfMovie: " + durationOfMovie + " minutes";
     }
 
-
     @Override
     public int compareTo(Films o) {
         return nameOfMovie.compareTo(o.getNameOfMovie());
