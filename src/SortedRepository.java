@@ -14,7 +14,7 @@ public class SortedRepository<T> implements IRepository<T> {
 
     @Override
     public void remove(T obj) {
-        boolean foundMovie;
+        boolean foundMovie = false;
         for (T t : sortedRepositories) {
             if (obj.equals(t)) {
                 sortedRepositories.remove(t);
@@ -24,7 +24,7 @@ public class SortedRepository<T> implements IRepository<T> {
                 break;
             }
         }
-        if (foundMovie = false) {
+        if (foundMovie == false) {
             System.out.println("No such movie in the repository");
         }
     }

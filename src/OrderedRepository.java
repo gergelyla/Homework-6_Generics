@@ -12,7 +12,7 @@ public class OrderedRepository<T> implements IRepository<T> {
 
     @Override
     public void remove(T obj) {
-        boolean foundMovie;
+        boolean foundMovie = false;
         for (int i = 0; i < orderedRepositories.size(); i++) {
             if (obj.equals(orderedRepositories.get(i))) {
                 orderedRepositories.remove(i);
@@ -22,7 +22,7 @@ public class OrderedRepository<T> implements IRepository<T> {
                 break;
             }
         }
-        if (foundMovie = false) {
+        if (foundMovie == false) {
             System.out.println("No such movie in the repository");
         }
     }
