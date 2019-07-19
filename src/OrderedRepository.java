@@ -42,7 +42,6 @@ public class OrderedRepository<T> implements IRepository<T> {
         for (int i = 0; i < orderedRepositories.size(); i++) {
             listedMovies.add(orderedRepositories.get(i));
         }
-        System.out.println("The list of movies in OrderedRepository: ");
         Iterator membersOfOrderedRepository = listedMovies.iterator();
         while (membersOfOrderedRepository.hasNext()) {
             System.out.println(membersOfOrderedRepository.next());
